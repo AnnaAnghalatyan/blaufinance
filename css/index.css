@@ -37,6 +37,68 @@ html {
 .section-content {
   padding: 90px 0; }
 
+.shadow-outer {
+  box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+  background: #fff;
+  border-radius: 4px;
+  max-width: 600px; }
+
+.input-wrapper {
+  position: relative; }
+  .input-wrapper .show-pass {
+    cursor: pointer;
+    z-index: 99; }
+  .input-wrapper .label {
+    color: gray; }
+  .input-wrapper .mdb-input {
+    width: 100%;
+    padding: 15px 30px 15px 15px;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.24);
+    position: relative;
+    background: transparent;
+    transition: 0.3s ease;
+    z-index: 99; }
+    .input-wrapper .mdb-input:hover {
+      border: 1px solid #558EFF; }
+      .input-wrapper .mdb-input:hover .label {
+        color: #558EFF; }
+    .input-wrapper .mdb-input:focus {
+      border: 1px solid #558EFF !important;
+      box-shadow: none;
+      outline: none; }
+      .input-wrapper .mdb-input:focus + .label {
+        top: -20px !important;
+        bottom: unset !important;
+        left: 0 !important;
+        color: #558EFF;
+        font-size: 12px;
+        z-index: 9; }
+      .input-wrapper .mdb-input:focus ~ i {
+        color: #558EFF; }
+  .input-wrapper .label {
+    position: absolute;
+    left: 15px;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    transition: 0.2s ease; }
+    .input-wrapper .label.top-standing {
+      top: -20px !important;
+      bottom: unset !important;
+      left: 0 !important;
+      font-size: 12px; }
+  .input-wrapper i {
+    position: absolute;
+    right: 10px;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    transition: 0.2s ease; }
+
 header {
   font-family: 'Mplus 1p', sans-serif;
   background: url("../img/headerbg.jpg") no-repeat;

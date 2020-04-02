@@ -9,7 +9,21 @@ $(document).ready(function () {
 });
 
 const scrollbtn = document.querySelector('.scroll-btn');
-scrollbtn.onclick = function () {
+if(scrollbtn) scrollbtn.onclick = function () {
     const h = window.innerHeight;
     window.scrollTo(0, h)
 };
+
+let mdbinputs = document.querySelectorAll('.mdb-input');
+if (mdbinputs) {
+    for (let i = 0; i < mdbinputs.length; i++) {
+        mdbinputs[i].addEventListener('focusout', function () {
+            if (this.value.trim()) {
+                this.parentElement.querySelector('.label').classList.add('top-standing')
+            } else {
+                this.parentElement.querySelector('.label').classList.remove('top-standing')
+            }
+        })
+    }
+
+}
